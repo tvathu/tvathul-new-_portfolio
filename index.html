@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis-scroll">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athul T V | Software Engineer & AI Enthusiast</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Athul T V, a B.Tech Computer Science & Engineering graduate specializing in AI, deep learning, backend systems, and web solutions. Open to opportunities.">
+  <meta name="keywords" content="Athul TV, Athul T V, Software Engineer, AI, Deep Learning, Django, Python, React, Web Developer, SCMS">
+  <meta property="og:title" content="Athul T V | Software Engineer & AI Enthusiast">
+  <meta property="og:description" content="Portfolio of Athul T V, B.Tech CSE Graduate specializing in AI, Deep Learning, and Web Engineering.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/636423ea1c03ca74c0a976d7/65ae629fbde0d3879dec3c06_Favicon%2032-2.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Three.js for 3D graphics -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Lenis for smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader-wrapper">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <span class="logo-text">Athul T V</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glows">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="cursor-glow" class="cursor-glow"></div>
+
+  <!-- Navigation bar -->
+  <nav class="nav-container">
+    <div class="nav-content">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-box">
+          <span class="logo-base">AT</span>
+          <span class="logo-extended">HUL T V</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <div class="nav-links-desktop">
+        <a href="#about" class="nav-item-link">About</a>
+        <a href="#services" class="nav-item-link">Services</a>
+        <a href="#projects" class="nav-item-link">Projects</a>
+        <a href="#experience" class="nav-item-link">Experience</a>
+        <a href="#contact" class="btn-nav">Contact</a>
+      </div>
+
+      <!-- Hamburger Menu Toggle Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="menu-header">
+        <h2>Get in Touch</h2>
+        <div class="mobile-contact-info">
+          <a href="mailto:tvathul2004@gmail.com" class="mobile-contact-item">
+            <i data-lucide="mail"></i> tvathul2004@gmail.com
+          </a>
+          <a href="tel:+918304944296" class="mobile-contact-item">
+            <i data-lucide="phone"></i> +91 8304944296
+          </a>
+        </div>
+      </div>
+      <div class="menu-links">
+        <a href="#about" class="mobile-link"><span>01</span> About</a>
+        <a href="#services" class="mobile-link"><span>02</span> Services</a>
+        <a href="#projects" class="mobile-link"><span>03</span> Projects</a>
+        <a href="#experience" class="mobile-link"><span>04</span> Experience</a>
+        <a href="#contact" class="mobile-link"><span>05</span> Contact</a>
+      </div>
+      <div class="menu-footer">
+        <div class="menu-socials">
+          <a href="https://github.com/tvathu" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com/in/tvathul" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        </div>
+        <p class="menu-meta">SCMS B.Tech CSE '26</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smooth scroll content wrapper -->
+  <div class="page-content" id="scroll-wrapper">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <!-- 3D Interactive Canvas -->
+      <div class="hero-canvas-container" id="hero-canvas"></div>
+
+      <!-- Repeating Background Track (Outline Text) -->
+      <div class="hero-bg-track">
+        <div class="marquee-track">
+          <div class="marquee-text-outline">ATHUL T V &bull; SOFTWARE ENGINEER &bull; AI ENTHUSIAST &bull; ATHUL T V &bull; SOFTWARE ENGINEER &bull; AI ENTHUSIAST &bull; </div>
+          <div class="marquee-text-outline" aria-hidden="true">ATHUL T V &bull; SOFTWARE ENGINEER &bull; AI ENTHUSIAST &bull; ATHUL T V &bull; SOFTWARE ENGINEER &bull; AI ENTHUSIAST &bull; </div>
+        </div>
+      </div>
+
+      <div class="hero-foreground">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1 class="hero-subtitle reveal-text">SOFTWARE DEVELOPER</h1>
+            <h2 class="hero-title reveal-text">
+              Engineering web systems &amp; <span class="gradient-text">deep learning</span> models.
+            </h2>
+            <p class="hero-desc reveal-text">
+              B.Tech Computer Science &amp; Engineering student passionate about AI integrations, robust backends, and responsive, animations-driven interfaces.
+            </p>
+            <div class="hero-actions reveal-fade">
+              <a href="#projects" class="btn-secondary">
+                <span class="btn-secondary-inner">
+                  <span class="btn-second-smallsquare"></span>
+                  <span>View Projects</span>
+                </span>
+              </a>
+              <a href="#contact" class="btn-primary">Let's talk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Stats / Meta Info -->
+      <div class="hero-bottom-bar">
+        <div class="container bottom-bar-content">
+          <div class="location-badge">
+            <i data-lucide="map-pin"></i>
+            <span>Kochi, Kerala, India</span>
+          </div>
+          <div class="badge-tag">
+            <i data-lucide="graduation-cap"></i>
+            <span>SCMS School of Engineering</span>
+          </div>
+          <div class="hero-social-links">
+            <a href="https://github.com/tvathu" target="_blank" class="social-icon-link" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com/in/tvathul" target="_blank" class="social-icon-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:tvathul2004@gmail.com" class="social-icon-link" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Focus Areas Section -->
+    <section id="services" class="section-layout services-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-number">01 /</span>
+          <h2 class="section-heading">Core Expertise</h2>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal-up" data-tilt>
+            <div class="card-glow"></div>
+            <div class="service-icon">
+              <i data-lucide="brain-circuit"></i>
+            </div>
+            <h3 class="service-title">AI &amp; Deep Learning</h3>
+            <p class="service-text">
+              Building and fine-tuning predictive architectures. Proficient in training machine learning models, deploying data ingestion pipelines, and applying vision models like YOLO.
+            </p>
+            <div class="service-tags">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>YOLO</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card reveal-up" data-tilt>
+            <div class="card-glow"></div>
+            <div class="service-icon">
+              <i data-lucide="server"></i>
+            </div>
+            <h3 class="service-title">Backend Architecture</h3>
+            <p class="service-text">
+              Developing resilient servers, secure REST APIs, and structured schemas. Experienced in relational databases, Django web frameworks, and application hosting lifecycles.
+            </p>
+            <div class="service-tags">
+              <span>Django</span>
+              <span>REST APIs</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal-up" data-tilt>
+            <div class="card-glow"></div>
+            <div class="service-icon">
+              <i data-lucide="layout"></i>
+            </div>
+            <h3 class="service-title">Full Stack React</h3>
+            <p class="service-text">
+              Creating responsive, accessible web interfaces. Crafting clean component states, custom layouts, and integrating high-performance APIs.
+            </p>
+            <div class="service-tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Vanilla CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reason Cards (Numbered features inspired by Jesse Ermens) -->
+    <section class="section-layout reasons-section">
+      <div class="reasons-wrapper">
+        <!-- Feature 1 -->
+        <div class="reason-row reveal-up">
+          <div class="reason-canvas-side">
+            <div class="reason-canvas" id="canvas-3d-1"></div>
+          </div>
+          <div class="reason-content-side">
+            <div class="reason-content-inner">
+              <div class="reason-number">01</div>
+              <h3 class="reason-title">Stay Ahead With AI</h3>
+              <p class="reason-desc">
+                Unlocking insights from complex unstructured datasets. Integrating predictive systems and deep learning into production environments seamlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="reason-row row-reverse reveal-up">
+          <div class="reason-content-side">
+            <div class="reason-content-inner">
+              <div class="reason-number">02</div>
+              <h3 class="reason-title">Engineered to Perform</h3>
+              <p class="reason-desc">
+                Prioritizing clean code, optimized SQL queries, and logical data structures to construct applications that run efficiently and scale reliably.
+              </p>
+            </div>
+          </div>
+          <div class="reason-canvas-side">
+            <div class="reason-canvas" id="canvas-3d-2"></div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="reason-row reveal-up">
+          <div class="reason-canvas-side">
+            <div class="reason-canvas" id="canvas-3d-3"></div>
+          </div>
+          <div class="reason-content-side">
+            <div class="reason-content-inner">
+              <div class="reason-number">03</div>
+              <h3 class="reason-title">Cloud Native Core</h3>
+              <p class="reason-desc">
+                Leveraging Amazon Web Services (AWS) solutions to build, deploy, and monitor scalable applications, maximizing uptime and reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-layout projects-section">
+      <div class="container">
+        <div class="projects-flex-header reveal-up">
+          <div class="section-header no-margin">
+            <span class="section-number">02 /</span>
+            <h2 class="section-heading">Selected Work</h2>
+          </div>
+          <a href="https://github.com/tvathu" target="_blank" class="btn-secondary-link">
+            <span>View GitHub</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Sticky Stack Projects -->
+        <div class="projects-stack">
+          <!-- Project 1 -->
+          <div class="project-stack-card reveal-up">
+            <div class="project-card-inner">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="project-num">01</span>
+                  <span class="project-category">Deep Learning / Data Pipelines</span>
+                </div>
+                <h3 class="project-name">OTT Revenue Prediction System</h3>
+                <p class="project-description">
+                  An advanced neural prediction system. Built a deep learning model to ingest content engagement, metrics, and demographics to predict OTT content revenues, enhancing data pipeline visibility.
+                </p>
+                <div class="project-spec-tags">
+                  <span>Python</span>
+                  <span>Deep Learning</span>
+                  <span>Data Pipelines</span>
+                  <span>Predictive Analytics</span>
+                </div>
+                <div class="project-action-row">
+                  <a href="https://github.com/tvathu" target="_blank" class="btn-secondary card-btn">
+                    <span class="btn-secondary-inner">
+                      <span class="btn-second-smallsquare"></span>
+                      <span>Source Code</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-visual">
+                <div class="project-visual-glass">
+                  <div class="visual-3d-box" id="project-3d-1"></div>
+                  <div class="visual-overlay-data">
+                    <div class="data-graph-line"></div>
+                    <div class="data-pulse-dot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-stack-card reveal-up">
+            <div class="project-card-inner">
+              <div class="project-info">
+                <div class="project-meta-row">
+                  <span class="project-num">02</span>
+                  <span class="project-category">AI Healthcare / Computer Vision</span>
+                </div>
+                <h3 class="project-name">Alzheimer's Assistant System</h3>
+                <p class="project-description">
+                  A multi-layered AI healthcare support platform designed to assist patients. Implemented image recognition, object detection using YOLOv8, OCR text extractions, and integrated text-to-speech feedback via Django REST APIs.
+                </p>
+                <div class="project-spec-tags">
+                  <span>Django</span>
+                  <span>REST APIs</span>
+                  <span>YOLO v8</span>
+                  <span>OCR</span>
+                  <span>Speech APIs</span>
+                </div>
+                <div class="project-action-row">
+                  <a href="https://github.com/tvathu" target="_blank" class="btn-secondary card-btn">
+                    <span class="btn-secondary-inner">
+                      <span class="btn-second-smallsquare"></span>
+                      <span>Source Code</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="project-visual">
+                <div class="project-visual-glass">
+                  <div class="visual-3d-box" id="project-3d-2"></div>
+                  <div class="visual-overlay-data">
+                    <div class="data-radar-scan"></div>
+                    <div class="data-grid-boxes"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-layout about-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-number">03 /</span>
+          <h2 class="section-heading">About Me</h2>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text-container">
+            <p class="about-lead-text reveal-words">
+              An engineering student merging mathematical models, structural code, and responsive design systems.
+            </p>
+            <p class="about-paragraph reveal-up">
+              Pursuing my B.Tech in Computer Science and Engineering at SCMS School of Engineering and Technology (Graduation: 2026, CGPA: 7.34). I thrive in environments requiring empathy, collaboration, and high-performance technologies. I build systems with clean code practices, ensuring that data moves fluidly and interfaces respond instantly.
+            </p>
+            <div class="about-actions reveal-up">
+              <a href="#contact" class="btn-secondary">
+                <span class="btn-secondary-inner">
+                  <span class="btn-second-smallsquare"></span>
+                  <span>Get in touch</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-card-container reveal-up">
+            <div class="profile-card-glass">
+              <div class="profile-photo-frame">
+                <!-- Using downloaded profile image -->
+                <img src="./assets/athul.jpg" alt="Athul T V Portrait" class="profile-image">
+                <div class="profile-status">
+                  <span class="status-indicator"></span>
+                  <span>Open to Internships</span>
+                </div>
+              </div>
+              <div class="profile-snapshot">
+                <h3 class="snapshot-title">Snapshot</h3>
+                <ul class="snapshot-list">
+                  <li>
+                    <span class="label">B.Tech CSE</span>
+                    <span class="value">2026 Grad</span>
+                  </li>
+                  <li>
+                    <span class="label">CGPA</span>
+                    <span class="value">7.34 / 10</span>
+                  </li>
+                  <li>
+                    <span class="label">University</span>
+                    <span class="value">KTU, India</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills/Expertise Horizontal Marquees -->
+    <section id="expertise" class="expertise-marquee-section">
+      <div class="marquee-marquee-wrapper">
+        <!-- Track 1: Left to Right -->
+        <div class="marquee-row marquee-row-ltr">
+          <div class="marquee-row-inner">
+            <div class="marquee-tag">React.js</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Node.js</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Python</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Django</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">MySQL</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">AWS Cloud</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Data Structures</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Algorithms</div>
+            <div class="marquee-dot"></div>
+            <!-- Duplicated for seamless loop -->
+            <div class="marquee-tag">React.js</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Node.js</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Python</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Django</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">MySQL</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">AWS Cloud</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Data Structures</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Algorithms</div>
+            <div class="marquee-dot"></div>
+          </div>
+        </div>
+
+        <!-- Track 2: Right to Left -->
+        <div class="marquee-row marquee-row-rtl">
+          <div class="marquee-row-inner">
+            <div class="marquee-tag">Deep Learning</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">YOLO v8</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">REST APIs</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Object-Oriented Programming</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Git Versioning</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">C Language</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Java OOP</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Responsive Web Design</div>
+            <div class="marquee-dot"></div>
+            <!-- Duplicated for seamless loop -->
+            <div class="marquee-tag">Deep Learning</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">YOLO v8</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">REST APIs</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Object-Oriented Programming</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Git Versioning</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">C Language</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Java OOP</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-tag">Responsive Web Design</div>
+            <div class="marquee-dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Timeline Section -->
+    <section id="experience" class="section-layout experience-section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-number">04 /</span>
+          <h2 class="section-heading">Timeline &amp; Background</h2>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line">
+            <div class="timeline-progress"></div>
+          </div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-date">Apr 2026</span>
+                <span class="timeline-category">Certification</span>
+              </div>
+              <h3 class="timeline-title">Learning Full Stack React &bull; Infosys</h3>
+              <p class="timeline-desc">
+                Completed comprehensive web systems training focusing on React states, modern layout flows, components lifecycle, and full-stack integration APIs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-date">Oct - Nov 2024</span>
+                <span class="timeline-category">Certification</span>
+              </div>
+              <h3 class="timeline-title">Machine Learning and AI &bull; ICT Academy of Kerala</h3>
+              <p class="timeline-desc">
+                Rigorous foundations training covering supervised and unsupervised paradigms, loss optimizers, regression models, classification metrics, and direct model implementations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-date">Apr - May 2023</span>
+                <span class="timeline-category">Internship</span>
+              </div>
+              <h3 class="timeline-title">AWS Internship Program &bull; IIIT Kottayam</h3>
+              <p class="timeline-desc">
+                Hands-on immersion program in cloud solutions architectures. Provisioned computing clusters, storage systems, and cloud functions to deploy cloud-native models.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="section-layout contact-section">
+      <div class="container">
+        <div class="contact-card-glass reveal-up">
+          <div class="contact-visual-glow"></div>
+          <div class="contact-grid">
+            <div class="contact-left">
+              <span class="contact-pre">Ready to collaborate?</span>
+              <h2 class="contact-title">Let's build <br><span class="gradient-text">something great</span>.</h2>
+              <p class="contact-desc">
+                If you have an internship position, a collaborative project, or simply want to chat about AI models, get in touch today.
+              </p>
+            </div>
+            
+            <div class="contact-right">
+              <div class="contact-methods">
+                <a href="mailto:tvathul2004@gmail.com" class="contact-btn mail-btn">
+                  <div class="contact-btn-content">
+                    <span class="btn-icon-wrap"><i data-lucide="mail"></i></span>
+                    <div class="btn-text-wrap">
+                      <span class="btn-meta">Email me</span>
+                      <span class="btn-label">tvathul2004@gmail.com</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-right" class="arrow-icon"></i>
+                </a>
+
+                <a href="tel:+918304944296" class="contact-btn">
+                  <div class="contact-btn-content">
+                    <span class="btn-icon-wrap"><i data-lucide="phone"></i></span>
+                    <div class="btn-text-wrap">
+                      <span class="btn-meta">Call / WhatsApp</span>
+                      <span class="btn-label">+91 8304944296</span>
+                    </div>
+                  </div>
+                  <i data-lucide="arrow-right" class="arrow-icon"></i>
+                </a>
+              </div>
+              
+              <div class="contact-social-flex">
+                <a href="https://github.com/tvathu" target="_blank" class="social-chip-link">
+                  <i data-lucide="github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/tvathul" target="_blank" class="social-chip-link">
+                  <i data-lucide="linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <div class="container footer-content">
+        <div class="footer-left">
+          <p class="copyright">&copy; 2026 Athul T V. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+          <p class="credits">Inspired by Jesse Ermens. Developed using Vanilla HTML, CSS &amp; JS.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
